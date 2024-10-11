@@ -14,6 +14,7 @@ allThemesButtons.forEach((button, index) => {
 });
 function updatePage(index) {
     displayPage(index);
+    document.querySelector('#backward_button').textContent = 'В главное меню';
 }
 // Функция для создания блока с текстом и изображением
 function createTextWithImage(paragraph) {
