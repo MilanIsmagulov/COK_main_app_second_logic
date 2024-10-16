@@ -952,6 +952,12 @@ ul li div{
     border-radius: 25px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
 }
+#popup_button_1{
+    z-index: 1200;
+}
+.popup_window{
+    z-index: 1800 !important;
+}
 :root{
     --v: 25px;
     --r: 100vh;

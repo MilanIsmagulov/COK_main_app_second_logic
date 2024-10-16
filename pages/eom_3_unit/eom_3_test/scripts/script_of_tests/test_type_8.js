@@ -28,7 +28,6 @@ function createTest(index){
             </div>
         </div>`;
         contentDiv.appendChild(testWrapper);
-        
         testWrapper.innerHTML += mainDiv;
         addZoomBtn();
         var imageWrapper = document.createElement('div');
@@ -50,6 +49,8 @@ function createTest(index){
             }
         }
         testWrapper.appendChild(imageWrapper);
+        document.getElementById('close_popup_btn').addEventListener('click', () => closePopUp());
+        document.getElementById('popup_button_1').addEventListener('click', () => showPopUp());
     };
     // Обновление глобальных переменных, которые будут хранить данные
     let globalDraw;
@@ -276,9 +277,6 @@ function createTest(index){
         if (shouldDecreaseAttempts){
             attempts--;
             localStorage.setItem(`attempts_${number}`, attempts.toString());
-            if (attempts === 0){
-                disabvarest();
-            };
         };
         localStorage.setItem('answer_from_' + index, JSON.stringify({ questionPlace: allCorrect }));
         document.getElementById('control_button_2').style.display = 'none';
@@ -321,6 +319,7 @@ function createTest(index){
             // Добавляем кнопку зума в каждый элемент
             item.innerHTML += `<button class='zoom_button' onclick='openPopUp(${index})' id='zoom_button_${index}'><img src='./content/zoom_up.svg' alt='zoom'></button>`;
         });
+
     }
 
     openPopUp();
@@ -364,6 +363,8 @@ function createTest(index){
 
 }
 
+
+
 function openPopUp() {
     var zoomBtn = document.querySelectorAll('.zoom_button');
     var popupWindow = document.querySelectorAll('.popup_type_10');
@@ -405,3 +406,12 @@ function closePopUp() {
     popup.classList.add('closed');
 }
 createTest(`index_${currentPageIndex}`);
+function addDescBtnLis(){
+    document.querySelector('#popup_button_1').onclick = () => {
+        document.querySelector('#popup_window_id').classList.remove('disabled');
+    }
+    document.querySelector('#close_popup_btn').onclick = () => {
+        document.querySelector('#popup_window_id').classList.add('disabled');
+    }
+}
+setTimeout(addDescBtnLis(), 100);

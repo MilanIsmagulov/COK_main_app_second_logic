@@ -171,6 +171,30 @@ const data = {
         ],
     },
     "index_12":{
+        "subtitle": "subtitle 3333",
+        "step_of_popup": "step 2",
+        "test":[
+            {"type": 9},
+            {"description": "Тут пишем описание задания"},
+            {"definitions": [
+                "First definitions",
+                "<video class='answer_or_definition_img' controls='controls' src='./content/video/test_video.mp4'></video>",
+                "Third definitions",
+                "Fourth definitions",
+                "<p class='popup_zoom_plc'><img class='answer_or_definition_img' src='./content/test_image.png' alt='1'></p>"
+            ]},
+            {"answers": [
+                "<p class='popup_zoom_plc'><img class='answer_or_definition_img' src='./content/test_image.png' alt='1'></p>",
+                "<p class='popup_zoom_plc zoom_paragraph'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, assumenda cumque omnis voluptate, et sapiente laboriosam cum amet aliquam nam nemo perferendis eius sequi voluptatem similique iure explicabo dolore iusto! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sit optio molestias earum eligendi, repellendus dolore, minus odit enim sequi placeat laudantium! Dolorum repellendus reiciendis reprehenderit soluta nobis, facilis dolore?</p>",
+                "Third Answer",
+                "Fourth Answer",
+                "Fifth Answer"
+            ]},
+            {"correct_answer_type_10": [5, 4, 3, 2, 1]},
+            {"image": true, "image_path": "./content/test_image.png", "image_sgn": "blablabla"}
+        ],
+    },
+    "index_13":{
         "subtitle": "Тут типа результаты",
         "step_of_popup": "Тут типа результаты",
         "result":[]

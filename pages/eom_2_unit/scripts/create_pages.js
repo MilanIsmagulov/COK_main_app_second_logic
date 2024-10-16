@@ -211,7 +211,7 @@ function waitForData(){
                                 replaceScript('./scripts/script_of_tests/test_type_7.js', 'test-script');
                                 break;
                             case 9:
-                                replaceScript('./scripts/script_of_tests/test_type_9.js', 'test-script');
+                                replaceScript('./scripts/script_of_tests/test_type_8.js', 'test-script');
                                 break;
                             default:
                                 console.log('Неизвестный тип теста');

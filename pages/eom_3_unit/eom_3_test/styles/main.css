@@ -911,6 +911,259 @@ ul li div{
     justify-content: center;
     flex-wrap: wrap;
 }
+:root{
+    --v: 25px;
+    --r: 100vh;
+}
+img{
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+}
+line{
+    stroke-linecap: round;
+}
+.popup_zoom_plc{
+    margin: 0 !important;
+}
+.correct {
+    transition: all 0.3s;
+    background-color: rgb(168, 255, 168) !important ;
+}
+.incorrect {
+    transition: all 0.3s;
+    background-color: rgb(255, 144, 144) !important;
+}
+.test_typ_10_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60% !important;
+}
+.test_wrapper_type_10{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.image_wrapper{
+    order: -1;
+    height: 100% !important;
+    text-align: center;
+    width: clamp(600px, 40%, 800px) !important;
+}
+.image_wrapper img{
+    width: inherit;
+    padding: clamp(15px,10vw,30px) !important;
+}
+.mapping {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.startColumn, .targetColumn {
+    display: flex;
+    flex-direction: column;
+    margin-right: var(--v);
+}
+.targetColumn {
+    margin-left: var(--v);
+    margin-right: 0;
+}
+.svgLayout {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    position: relative;
+}
+/* Убираем последнее margin-bottom */
+.startColumn .svgLayout:last-child,
+.targetColumn .svgLayout:last-child {
+    margin-bottom: 0;
+}
+.element_div{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 5px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.popup_window{
+    z-index: 1800 !important;
+}
+.startColumn > div{
+    border-radius: 25px var(--r) var(--r) 25px;
+}
+.targetColumn > div{
+    border-radius: var(--r) 25px 25px var(--r);
+}
+.svgLayout{
+    margin: 0;
+}
+.targetField, .definition{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: clamp(15px, 1.5vw, 25px);
+    width: clamp(150px, 20vw, 450px);
+    height: 100px;
+    margin-left: 15px;
+}
+.element_div_2{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.buttons_div{
+    text-align: end;
+    margin-right: 15px;
+}
+.control_button{
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.control_button{
+    height: 50px;
+    width: 150px;
+    margin-left: 10px;
+    border: 0;
+    background: rgb(0, 114, 192);
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.answer_or_definition_img{
+    z-index: 0;
+    border-radius: 5px;
+    margin: 0 !important;
+    width: auto !important;
+    height: 100% !important;
+}
+.popup_zoom_plc{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100% !important;
+    z-index: 1000;
+}
+.popup_type_10{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #00000050;
+    top: 0;
+    left: 0;
+    color: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2000;
+}
+.popup_body_type_10 {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+}
+.popup_content_type_10 {
+    background-color: white;
+    color: black;
+    min-width: 400px;
+    max-width: 1700px;
+    min-height: 60%;
+    border-radius: 25px;
+    padding: 15px;
+}
+.popup_inner_content_type_10{
+    padding: 15px;
+}
+.popup_header_type_10{
+    display: flex;
+    justify-content: space-between;
+}
+.definition p > button{
+    left: 10px !important;
+}
+.popup_header_text_type_10 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(255, 113, 117);
+    font-size: 25px;
+}
+#control_button_2{
+    z-index: 10000;
+}
+.gray_dis {
+    cursor: no-drop;
+    background-color: #33333350 !important;
+}
+.popup_header_type_10 button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    border: 0;
+}
+.popup_header_type_10 button img{
+    width: 35px !important;
+    height: 35px !important;
+    margin: 0 !important;
+    padding: 5px;
+}
+.zoom_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    color: #fff;
+    border: solid 1px #707070;
+    background-color: #0070c0;
+    z-index: 1500;
+}
+.zoom_button img{
+    width: 60% !important;
+    margin: 0 !important;
+}
+.zoom_paragraph{
+    display: block;
+    height: initial !important;
+    width: 350px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis !important; 
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+.popup_inner_content_type_10{
+    font-size: 25px;
+}
+.closed{
+    display: none;
+}
+.targetField, .definition{
+    padding: 5px;
+}
 @media (max-width: 1200px) {
     .test_wrapper{
         min-width: 100% !important;
@@ -1241,5 +1494,40 @@ ul li div{
     }
     .answer_form p{
         font-size: 14px !important;
+    }
+}
+@media (max-width: 1500px) {
+    .image_wrapper img{
+        width: initial;
+    }
+    .test_wrapper_type_10{
+        flex-direction: column;
+        margin-bottom: 100px;
+        width: 100% !important;
+        margin-bottom: 0 !important;
+    }
+    .test_typ_10_content{
+        width: 100% !important;
+    }
+}
+@media (max-width: 1000px) {
+    :root{
+        --v: 25px;
+    }
+}
+@media (max-width: 800px) {
+    :root{
+        --v: 10px;
+    }
+}
+@media (max-width: 550px) {
+    :root{
+        --v: 5px;
+    }
+    .element_div{
+        padding: 5px;
+    }
+    .image_wrapper{
+        width: 400px;
     }
 }
